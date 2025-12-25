@@ -1,0 +1,188 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    animation: slideDown 1s ease-out;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #a0eaff;
+}
+
+/* Navigation with glow like skills */
+nav {
+    text-align: center;
+    margin: 20px 0;
+    animation: slideUp 1s ease-out;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 240, 0.25);
+    box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+nav a:hover,
+nav a.active {
+    background: #00fff0;
+    color: #000;
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 15px #00fff0, 0 0 30px #00fff0 inset;
+    animation: glow 1.2s infinite alternate;
+}
+
+/* Sections – CENTER EVERYTHING */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00fff0;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p,
+section a {
+    font-size: 1.1em;
+    color: #e0f7fa;
+}
+
+section a:hover {
+    color: #00fff0;
+    text-decoration: underline;
+}
+
+/* Skills list – white font, centered, animated */
+#skills ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#skills ul li {
+    margin: 8px 0;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+#skills ul li:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 15px #fff, 0 0 30px #fff inset;
+    animation: glow 1.2s infinite alternate;
+}
+
+/* Glow animation keyframes */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px #fff, 0 0 15px #fff inset;
+    }
+    50% {
+        box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
+    }
+}
+
+/* Education blocks */
+#education .semester {
+    margin: 25px auto;
+    padding: 20px;
+    background: rgba(0, 255, 240, 0.12);
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+#education .semester h3 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #00fff0;
+}
+
+#education .semester ul {
+    list-style: disc inside;
+    padding-left: 10px;
+}
+
+#education .semester ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

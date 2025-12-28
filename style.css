@@ -90,7 +90,7 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* Skills list – white font, centered, animated */
+/* Skills list */
 #skills ul {
     list-style: none;
     margin-top: 20px;
@@ -122,16 +122,6 @@ section a:hover {
     transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 0 15px #fff, 0 0 30px #fff inset;
     animation: glow 1.2s infinite alternate;
-}
-
-/* Glow animation keyframes */
-@keyframes glow {
-    0%, 100% {
-        box-shadow: 0 0 5px #fff, 0 0 15px #fff inset;
-    }
-    50% {
-        box-shadow: 0 0 20px #fff, 0 0 40px #fff inset;
-    }
 }
 
 /* Education blocks */
@@ -166,7 +156,61 @@ footer {
     margin-top: 40px;
 }
 
+/* CV Button like navbar links */
+.cv-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(0, 255, 240, 0.25);
+    box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.cv-btn:hover {
+    background: #00fff0;
+    color: #000;
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 15px #00fff0, 0 0 30px #00fff0 inset;
+    animation: glow 1.2s infinite alternate;
+}
+
+/* Center CV button above contact */
+#download {
+    margin-bottom: 40px;
+}
+
+/* Mobile navigation & CV button fix */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 8px 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    #download .cv-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
 /* Animations */
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px #fff, 0 0 15px #fff inset; }
+    50% { box-shadow: 0 0 20px #fff, 0 0 40px #fff inset; }
+}
+
 @keyframes slideDown {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
@@ -185,29 +229,4 @@ footer {
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* Download CV button */
-.cv-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #1e90ff; /* blue */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 2rem auto; /* centers horizontally */
-}
-
-.cv-btn:hover {
-    background-color: #0b63c2;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #1e90ff, 0 0 30px #1e90ff inset;
-}
-
-/* Center button in its section */
-section .cv-btn {
-    display: block;
 }

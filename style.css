@@ -37,13 +37,17 @@ nav {
     text-align: center;
     margin: 20px 0;
     animation: slideUp 1s ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* spacing between buttons */
 }
 
 nav a,
 nav .cv-btn {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 5px;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 6px;
@@ -183,6 +187,43 @@ footer {
     animation: glow 1.2s infinite alternate;
 }
 
+/* Center CV button section */
+#download {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#download .cv-btn {
+    width: auto;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;       /* allow buttons to wrap instead of stacking */
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a,
+    nav .cv-btn {
+        width: auto;           /* auto width to fit text */
+        text-align: center;
+        margin: 5px;           /* small spacing */
+        padding: 10px 15px;    
+        font-size: 1em;        /* scale text for small screens */
+    }
+
+    #download {
+        margin-bottom: 40px;
+    }
+
+    #download .cv-btn {
+        width: auto;
+    }
+}
+
 /* Animations */
 @keyframes glow {
     0%, 100% { box-shadow: 0 0 5px #fff, 0 0 15px #fff inset; }
@@ -207,32 +248,4 @@ footer {
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a,
-    nav .cv-btn {
-        margin: 8px 0;
-        width: 80%;
-        text-align: center;
-    }
-
-    /* Move CV button above contact section */
-    #download {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 40px;
-    }
-
-    #download .cv-btn {
-        width: 80%;
-        text-align: center;
-    }
 }

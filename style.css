@@ -39,7 +39,8 @@ nav {
     animation: slideUp 1s ease-out;
 }
 
-nav a {
+nav a,
+nav .cv-btn {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
@@ -54,7 +55,8 @@ nav a {
 }
 
 nav a:hover,
-nav a.active {
+nav a.active,
+nav .cv-btn:hover {
     background: #00fff0;
     color: #000;
     transform: scale(1.05) rotate(-2deg);
@@ -172,37 +174,13 @@ footer {
     overflow: hidden;
 }
 
+/* CV Button hover animation */
 .cv-btn:hover {
     background: #00fff0;
     color: #000;
     transform: scale(1.05) rotate(-2deg);
     box-shadow: 0 0 15px #00fff0, 0 0 30px #00fff0 inset;
     animation: glow 1.2s infinite alternate;
-}
-
-/* Center CV button above contact */
-#download {
-    margin-bottom: 40px;
-}
-
-/* Mobile navigation & CV button fix */
-@media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 8px 0;
-        width: 80%;
-        text-align: center;
-    }
-
-    #download .cv-btn {
-        width: 80%;
-        text-align: center;
-    }
 }
 
 /* Animations */
@@ -229,4 +207,32 @@ footer {
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a,
+    nav .cv-btn {
+        margin: 8px 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Move CV button above contact section */
+    #download {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    #download .cv-btn {
+        width: 80%;
+        text-align: center;
+    }
 }

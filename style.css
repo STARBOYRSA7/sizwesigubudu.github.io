@@ -18,13 +18,11 @@ header {
     text-align: center;
     padding: 60px 20px;
     background: rgba(0, 0, 0, 0.5);
-    animation: slideDown 1s ease-out;
 }
 
 header h1 {
     font-size: 3em;
     margin-bottom: 10px;
-    animation: fadeIn 2s ease-in;
 }
 
 header p {
@@ -53,8 +51,6 @@ nav .cv-btn {
     transition: all 0.3s ease;
     background: rgba(0, 255, 240, 0.25);
     box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
-    position: relative;
-    overflow: hidden;
 }
 
 nav a:hover,
@@ -73,7 +69,6 @@ section {
     max-width: 900px;
     margin: auto;
     text-align: center;
-    animation: fadeInUp 1s ease forwards;
 }
 
 section h2 {
@@ -95,7 +90,7 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* Skills hover effect using navbar style */
+/* Skills hover effect (same as navbar) */
 .skills-list span {
     display: inline-block;
     margin: 5px 10px;
@@ -107,8 +102,6 @@ section a:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
-    position: relative;
-    overflow: hidden;
 }
 
 .skills-list span:hover {
@@ -131,8 +124,6 @@ section a:hover {
     transition: all 0.3s ease;
     background: rgba(0, 255, 240, 0.25);
     box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
-    position: relative;
-    overflow: hidden;
 }
 
 .cv-btn:hover {
@@ -143,13 +134,6 @@ section a:hover {
     animation: glow 1.2s infinite alternate;
 }
 
-/* Center CV button section */
-#download {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -158,49 +142,8 @@ footer {
     margin-top: 40px;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    nav a,
-    nav .cv-btn {
-        width: auto;
-        text-align: center;
-        margin: 5px;
-        padding: 10px 15px;
-        font-size: 1em;
-    }
-
-    #download {
-        margin-bottom: 40px;
-    }
-
-    #download .cv-btn {
-        width: auto;
-    }
-}
-
 /* Animations */
 @keyframes glow {
     0%, 100% { box-shadow: 0 0 5px #fff, 0 0 15px #fff inset; }
     50% { box-shadow: 0 0 20px #fff, 0 0 40px #fff inset; }
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }

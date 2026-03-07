@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -32,15 +32,14 @@ header p {
     color: #a0eaff;
 }
 
-/* Navigation with glow like skills */
+/* Navbar */
 nav {
     text-align: center;
     margin: 20px 0;
-    animation: slideUp 1s ease-out;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* spacing between buttons */
+    gap: 10px;
 }
 
 nav a,
@@ -68,7 +67,7 @@ nav .cv-btn:hover {
     animation: glow 1.2s infinite alternate;
 }
 
-/* Sections – CENTER EVERYTHING */
+/* Sections */
 section {
     padding: 60px 20px;
     max-width: 900px;
@@ -96,63 +95,31 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* Skills hover for span version */
+/* Skills hover effect using navbar style */
 .skills-list span {
     display: inline-block;
     margin: 5px 10px;
     padding: 10px 20px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background: rgba(0, 255, 240, 0.25);
     color: #fff;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 5px rgba(0, 255, 240, 0.4);
     position: relative;
     overflow: hidden;
 }
 
 .skills-list span:hover {
-    background: #fff;
+    background: #00fff0;
     color: #000;
-    transform: scale(1.1) rotate(-2deg);
-    box-shadow: 0 0 15px #fff, 0 0 30px #fff inset;
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 0 15px #00fff0, 0 0 30px #00fff0 inset;
     animation: glow 1.2s infinite alternate;
 }
 
-/* Education blocks */
-#education .semester {
-    margin: 25px auto;
-    padding: 20px;
-    background: rgba(0, 255, 240, 0.12);
-    border-radius: 10px;
-    max-width: 700px;
-}
-
-#education .semester h3 {
-    font-size: 1.5em;
-    margin-bottom: 12px;
-    color: #00fff0;
-}
-
-#education .semester ul {
-    list-style: disc inside;
-    padding-left: 10px;
-}
-
-#education .semester ul li {
-    margin-bottom: 5px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    margin-top: 40px;
-}
-
-/* CV Button like navbar links */
+/* CV Button */
 .cv-btn {
     display: inline-block;
     color: #fff;
@@ -168,7 +135,6 @@ footer {
     overflow: hidden;
 }
 
-/* CV Button hover animation */
 .cv-btn:hover {
     background: #00fff0;
     color: #000;
@@ -184,25 +150,29 @@ footer {
     margin-bottom: 40px;
 }
 
-#download .cv-btn {
-    width: auto;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
 }
 
-/* MOBILE FIX */
+/* Mobile adjustments */
 @media (max-width: 768px) {
     nav {
-        flex-wrap: wrap;       /* allow buttons to wrap instead of stacking */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 8px;
     }
 
     nav a,
     nav .cv-btn {
-        width: auto;           /* auto width to fit text */
+        width: auto;
         text-align: center;
-        margin: 5px;           /* small spacing */
-        padding: 10px 15px;    
-        font-size: 1em;        /* scale text for small screens */
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 1em;
     }
 
     #download {
@@ -222,11 +192,6 @@ footer {
 
 @keyframes slideDown {
     from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 

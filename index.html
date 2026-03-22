@@ -1,124 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Sizwe Sigubudu – South African Software Developer skilled in Java, JavaScript, React, Kotlin, C#, Android Development, Web Development, and Software Engineering.">
-    <meta name="keywords" content="Sizwe Sigubudu, Software Developer South Africa, Java Developer, Web Developer, Android Developer, C#, Kotlin">
-    <meta name="author" content="Sizwe Sigubudu">
-    <meta name="robots" content="index, follow">
-
-    <title>Sizwe Sigubudu | Software Developer</title>
-
-    <!-- Link to CSS in same folder -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sizwe Sigubudu · Software Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-    <h1>Sizwe Sigubudu</h1>
-    <p>Software Developer</p>
-</header>
+<!-- ═══ SIDEBAR (desktop) / TOP HEADER (mobile) ═══ -->
+<aside class="sidebar">
+  <div>
+    <div class="sidebar-greeting">I'm</div>
+    <div class="sidebar-name">Sizwe<br>Sigubudu</div>
+    <div class="sidebar-role">FULL-STACK · MOBILE · WEB</div>
+  </div>
 
-<nav class="navbar">
-    <a href="#about" class="nav-btn">About Me</a>
-    <a href="#skills" class="nav-btn">Skills</a>
-    <a href="#projects" class="nav-btn">Projects</a>
-    <a href="#education" class="nav-btn">Education</a>
-    <a href="#contact" class="nav-btn">Contact</a>
+  <div class="sidebar-divider"></div>
+
+  <ul class="contact-list">
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.32h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Phone</div>
+        <div class="contact-value"><a href="tel:+27662387374">0662 387 374</a></div>
+      </div>
+    </li>
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Durban, South Africa</div>
+      </div>
+    </li>
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value"><a href="https://linkedin.com/in/sizwe-sigubudu" target="_blank">sizwe-sigubudu</a></div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="sidebar-divider"></div>
+
+  <nav style="width:100%">
+    <ul class="sidebar-nav">
+      <li><a href="#about" class="active"><span class="nav-dot"></span>About</a></li>
+      <li><a href="#skills"><span class="nav-dot"></span>Skills</a></li>
+      <li><a href="#portfolio"><span class="nav-dot"></span>Portfolio</a></li>
+      <li><a href="#education"><span class="nav-dot"></span>Education</a></li>
+      <li><a href="#contact"><span class="nav-dot"></span>Contact</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- ═══ MOBILE BOTTOM NAV ═══ -->
+<nav class="mobile-nav">
+  <a href="#about" class="active">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    About
+  </a>
+  <a href="#skills">
+    <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    Skills
+  </a>
+  <a href="#portfolio">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Work
+  </a>
+  <a href="#education">
+    <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    Edu
+  </a>
+  <a href="#contact">
+    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    Contact
+  </a>
 </nav>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I'm a 24-year-old South African software developer with a strong background in Java.
-        I’m expanding my skills in JavaScript, React, and C#, and enjoy building meaningful projects.
-        My goal is to empower young South Africans through accessible tech education.
-    </p>
-</section>
+<!-- ═══ MAIN CONTENT ═══ -->
+<main class="main">
 
-<section id="skills" class="section">
-    <h2>Skills</h2>
-    <p class="skills-list">
-        <span>Java</span>
-        <span>Kotlin</span>
-        <span>C#</span>
-        <span>JavaScript</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>SQL</span>
-        <span>Android App Development (Kotlin)</span>
-        <span>RoomDB SQLite</span>
-        <span>REST API integration</span>
-        <span>UI/UX implementation from mockups</span>
-        <span>Object-Oriented Programming (OOP)</span>
-        <span>MVC Architecture</span>
-        <span>SDLC (Software Development Life Cycle)</span>
-        <span>Agile methodology</span>
-        <span>Version Control Git GitHub</span>
-        <span>Database Design Normalization</span>
-        <span>Stored Procedures</span>
-        <span>CRUD Operations</span>
-        <span>Authentication Authorization</span>
-        <span>ASP.NET Core MVC</span>
-        <span>.NET Framework</span>
-        <span>Android Studio</span>
-        <span>Visual Studio</span>
-        <span>VS Code</span>
-        <span>Microsoft Office Word Excel PowerPoint</span>
-        <span>Problem Solving</span>
-    </p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-intro">
+      <div class="hero-greeting">Hello, I'm</div>
+      <h1 class="hero-name">Sizwe<br><span>Sigubudu</span></h1>
+      <p class="hero-subtitle">Full-Stack · Mobile · Web Development · Backend</p>
+      <p class="hero-description">
+        Full-Stack Software Developer with an NQF Level 6 Diploma in IT from Rosebank College, Durban. Skilled in C#, ASP.NET Core, SQL Server, Java, and Android (Kotlin). I build scalable web and mobile applications with strong backend logic and clean architecture — passionate about solving real-world problems through technology.
+      </p>
+      <div class="hero-badges">
+        <span class="badge">C# / ASP.NET Core</span>
+        <span class="badge">Kotlin / Android</span>
+        <span class="badge">SQL Server</span>
+        <span class="badge">Supabase</span>
+        <span class="badge">HTML · CSS · JS</span>
+        <span class="badge">Git / GitHub</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          View Projects
+        </a>
+        <a href="assets/Sizwe_Sigubudu_CV.pdf" class="btn btn-ghost" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="section">
-    <h2>Projects</h2>
-    <p>
-        View my projects on 
-        <a href="https://github.com/starboyrsa7" target="_blank">GitHub</a> 
-        and connect with me on 
-        <a href="https://www.linkedin.com/in/sizwe-sigubudu-01965328a" target="_blank">LinkedIn</a>.
-    </p>
-</section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-tag">Expertise</div>
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">Mobile</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Kotlin</span>
+          <span class="skill-tag">Android Studio</span>
+          <span class="skill-tag">RoomDB</span>
+          <span class="skill-tag">REST API</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Web & Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">ASP.NET Core MVC</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">.NET Framework</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Database</div>
+        <div class="skill-tags">
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">Supabase</span>
+          <span class="skill-tag">CRUD</span>
+          <span class="skill-tag">Stored Procs</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Tools & Practice</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git & GitHub</span>
+          <span class="skill-tag">Visual Studio</span>
+          <span class="skill-tag">VS Code</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">MVC</span>
+          <span class="skill-tag">Agile</span>
+          <span class="skill-tag">SDLC</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">English</span>
+          <span class="skill-tag">Zulu</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="education" class="section">
-    <h2>EDUCATION HISTORY</h2>
-    <p>Rosebank College, Durban<br>2023 – 2025<br>Diploma in Software Development</p>
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="section-tag">Work</div>
+    <h2 class="section-title">Projects</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile</button>
+      <button class="filter-btn" onclick="filterProjects('web', this)">Web</button>
+      <button class="filter-btn" onclick="filterProjects('fullstack', this)">Full-Stack</button>
+    </div>
+    <div class="projects-grid">
 
-    <h3>MODULES</h3>
-    <p>
-        Programming 1A<br>
-        Programming 1B<br>
-        Programming 2A<br>
-        Programming 2B<br>
-        Applied Programming<br>
-        Database Introduction<br>
-        Database Intermediate<br>
-        Database Advanced<br>
-        System Analysis and Design<br>
-        Web Development Introduction<br>
-        Web Development Intermediate<br>
-        Human Computer Interaction<br>
-        Information Security<br>
-        Software Quality and Testing<br>
-        IT Project Management<br>
-        Work Integrated Learning
-    </p>
-</section>
+      <div class="project-card" data-cat="mobile">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a0f2e,#0d1f1a)">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#8b5cf6,#34d399)"></div>
+          <div class="project-thumb-icon" style="background:rgba(139,92,246,0.2)">💰</div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Mobile App</div>
+          <div class="project-name">Budget Tracker App</div>
+          <div class="project-desc">Android budgeting application with full expense tracking, goal setting, visual data trends, and local data persistence via RoomDB/SQLite.</div>
+          <div class="project-stack">
+            <span class="stack-tag">Kotlin</span>
+            <span class="stack-tag">RoomDB</span>
+            <span class="stack-tag">Android Studio</span>
+            <span class="stack-tag">Material Design</span>
+          </div>
+        </div>
+      </div>
 
-<section id="download" class="section">
-    <a class="cv-btn" href="assets/Sizwe_Sigubudu_CV.pdf" download>Download CV</a>
-</section>
+      <div class="project-card" data-cat="web">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0d1525,#0d1f10)">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#3b82f6,#34d399)"></div>
+          <div class="project-thumb-icon" style="background:rgba(52,211,153,0.15)">📋</div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Web Application</div>
+          <div class="project-name">Lecturer Claim Management</div>
+          <div class="project-desc">Web-based claim processing system for academic staff — handles submissions, approvals, document management, and real-time status tracking.</div>
+          <div class="project-stack">
+            <span class="stack-tag">ASP.NET Core MVC</span>
+            <span class="stack-tag">C#</span>
+            <span class="stack-tag">SQL Server</span>
+          </div>
+        </div>
+      </div>
 
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Phone: <a href="tel:+27662387374">+27 66 238 7374</a></p>
-    <p>Email: <a href="mailto:sizwesigubudu7@gmail.com">sizwesigubudu7@gmail.com</a></p>
-</section>
+      <div class="project-card" data-cat="fullstack">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#120d2e,#0d1520)">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#8b5cf6,#3b82f6)"></div>
+          <div class="project-thumb-icon" style="background:rgba(139,92,246,0.15)">📊</div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Full-Stack · In Progress</div>
+          <div class="project-name">Personal Finance App</div>
+          <div class="project-desc">Dark-mode mobile finance app with ZAR currency, 4-screen layout (Home, Stats, Goals, History), violet/mint accent system, and Supabase backend.</div>
+          <div class="project-stack">
+            <span class="stack-tag">Supabase</span>
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
 
-<footer>
-    <p>&copy; 2026 Sizwe Sigubudu</p>
-</footer>
+      <div class="project-card" data-cat="web">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0d1a10,#0d1525)">
+          <div class="project-thumb-bg" style="background:linear-gradient(135deg,#34d399,#3b82f6)"></div>
+          <div class="project-thumb-icon" style="background:rgba(52,211,153,0.15)">🎓</div>
+        </div>
+        <div class="project-body">
+          <div class="project-type">Web Design</div>
+          <div class="project-name">Student-Centric Website</div>
+          <div class="project-desc">WCAG-compliant peer-support and mentorship web platform for Rosebank College students, focused on inclusive UX and responsive layout.</div>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">WCAG</span>
+          </div>
+        </div>
+      </div>
 
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-tag">Background</div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon">RC</div>
+      <div>
+        <div class="edu-school">Rosebank College Durban</div>
+        <div class="edu-degree">Diploma in Software Development</div>
+        <div class="edu-years">NQF LEVEL 6 · 2023 – 2025</div>
+        <div class="edu-modules">
+          <span class="module-tag">Programming 1A–2B</span>
+          <span class="module-tag">Database Intro–Advanced</span>
+          <span class="module-tag">System Analysis & Design</span>
+          <span class="module-tag">Web Development</span>
+          <span class="module-tag">Human Computer Interaction</span>
+          <span class="module-tag">Information Security</span>
+          <span class="module-tag">Software Quality & Testing</span>
+          <span class="module-tag">IT Project Management</span>
+          <span class="module-tag">Applied Programming</span>
+          <span class="module-tag">Work Integrated Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <a href="tel:+27662387374" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.32h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Phone</div>
+          <div class="contact-card-value">0662 387 374</div>
+        </div>
+      </a>
+      <a href="mailto:Sizwesigubudu7@gmail.com" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value">Sizwesigubudu7@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/sizwe-sigubudu" target="_blank" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </div>
+        <div>
+          <div class="contact-card-label">LinkedIn</div>
+          <div class="contact-card-value">sizwe-sigubudu</div>
+        </div>
+      </a>
+      <a href="https://github.com/STARBOYRSA7" target="_blank" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </div>
+        <div>
+          <div class="contact-card-label">GitHub</div>
+          <div class="contact-card-value">STARBOYRSA7</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-copy">© 2026 Sizwe Sigubudu · Durban, ZA</div>
+    <div class="footer-made">References available upon request</div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

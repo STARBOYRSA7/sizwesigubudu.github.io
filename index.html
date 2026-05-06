@@ -6,10 +6,18 @@
     <title>Sizwe Sigubudu · Software Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra spacing for better layout breathing room */
+        section { padding: 80px 0; }
+        .edu-card { margin-bottom: 40px; padding: 30px; }
+        .project-card { margin-bottom: 30px; }
+        .skill-group { margin-bottom: 30px; }
+        .hero-description { line-height: 1.8; margin-bottom: 30px; }
+    </style>
 </head>
 <body>
 
-<!-- ═══ SIDEBAR (desktop) / TOP HEADER (mobile) ═══ -->
+<!-- ═══ SIDEBAR ═══ -->
 <aside class="sidebar">
     <div>
         <div class="sidebar-greeting">I'm</div>
@@ -38,15 +46,6 @@
                 <div class="contact-value">Durban, South Africa</div>
             </div>
         </li>
-        <li>
-            <div class="contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div>
-                <div class="contact-label">LinkedIn</div>
-                <div class="contact-value"><a href="https://www.linkedin.com/in/sizwe-sigubudu-01965328a" target="_blank">sizwe-sigubudu</a></div>
-            </div>
-        </li>
     </ul>
 
     <div class="sidebar-divider"></div>
@@ -63,19 +62,17 @@
     </nav>
 </aside>
 
-<!-- ═══ MAIN CONTENT ═══ -->
 <main class="main">
 
     <!-- ABOUT -->
     <section id="about">
         <div class="hero-grid-bg"></div>
-        <div class="hero-glow"></div>
         <div class="hero-intro">
             <div class="hero-greeting">Hello, I'm</div>
             <h1 class="hero-name">Sizwe<br><span>Sigubudu</span></h1>
             <p class="hero-subtitle">Full-Stack · Mobile · Web & Backend</p>
             <p class="hero-description">
-                Full-Stack Software Developer with an NQF Level 6 Diploma in IT[cite: 1]. I specialize in building scalable web and mobile applications using C#, ASP.NET Core, SQL Server, and Android (Kotlin/Jetpack Compose)[cite: 1]. Passionate about solving real-world problems through clean architecture[cite: 1].
+                Full-Stack Software Developer with an NQF Level 6 Diploma in IT. I specialize in building scalable web and mobile applications using C#, ASP.NET Core, SQL Server, and Android (Kotlin/Jetpack Compose). Passionate about solving real-world problems through clean architecture.
             </p>
             <div class="hero-cta">
                 <a href="#portfolio" class="btn btn-primary">View Projects</a>
@@ -89,31 +86,29 @@
         <div class="section-tag">Career</div>
         <h2 class="section-title">Experience</h2>
         
-        <!-- CodeAlpha Internship -->
         <div class="edu-card">
             <div class="edu-icon">CA</div>
             <div>
                 <div class="edu-school">CodeAlpha · Internship</div>
                 <div class="edu-degree">Full Stack Development Intern</div>
                 <div class="edu-years">May 2026 – Present · Remote</div>
-                <p class="hero-description" style="margin-top: 10px; font-size: 0.9rem;">
+                <p class="hero-description" style="margin-top: 15px; font-size: 0.95rem;">
                     Building full stack web development projects as part of a one-month virtual internship programme. Tasks documented on GitHub with live demos shared on LinkedIn.
                 </p>
             </div>
         </div>
 
-        <!-- Freelance Experience -->
-        <div class="edu-card" style="margin-top: 25px;">
+        <div class="edu-card">
             <div class="edu-icon">FS</div>
             <div>
-                <div class="edu-school">Freelance Software Developer[cite: 1]</div>
-                <div class="edu-degree">Self-employed | Durban, South Africa[cite: 1]</div>
-                <div class="edu-years">2025 – Present[cite: 1]</div>
-                <ul style="margin-top: 10px; font-size: 0.9rem; color: #a0a0a0; padding-left: 20px;">
-                    <li style="margin-bottom: 5px;">Built Android trading simulator app (Kotlin/Jetpack Compose) with EMA, RSI, and MACD indicators[cite: 1].</li>
-                    <li style="margin-bottom: 5px;">Deployed personal portfolio website on GitHub Pages showcasing six live projects[cite: 1].</li>
-                    <li style="margin-bottom: 5px;">Prototyped full-stack finance web app using Supabase with real-time authentication[cite: 1].</li>
-                    <li>Developed C# .NET 8 cybersecurity chatbot with CI/CD via GitHub Actions[cite: 1].</li>
+                <div class="edu-school">Freelance Software Developer</div>
+                <div class="edu-degree">Self-employed | Durban, South Africa</div>
+                <div class="edu-years">2025 – Present</div>
+                <ul style="margin-top: 15px; font-size: 0.95rem; color: #a0a0a0; padding-left: 20px; line-height: 2;">
+                    <li>Built Android trading simulator app (Kotlin/Jetpack Compose) with EMA, RSI, and MACD indicators.</li>
+                    <li>Deployed personal portfolio website on GitHub Pages showcasing six live projects.</li>
+                    <li>Prototyped full-stack finance web app using Supabase with real-time authentication.</li>
+                    <li>Developed C# .NET 8 cybersecurity chatbot with CI/CD via GitHub Actions.</li>
                 </ul>
             </div>
         </div>
@@ -127,31 +122,19 @@
             <div class="skill-group">
                 <div class="skill-group-label">Mobile</div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Kotlin[cite: 1]</span>
-                    <span class="skill-tag">Jetpack Compose[cite: 1]</span>
-                    <span class="skill-tag">Android Studio[cite: 1]</span>
-                    <span class="skill-tag">RoomDB[cite: 1]</span>
-                    <span class="skill-tag">AdMob[cite: 1]</span>
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">Jetpack Compose</span>
+                    <span class="skill-tag">Android Studio</span>
+                    <span class="skill-tag">RoomDB</span>
                 </div>
             </div>
             <div class="skill-group">
                 <div class="skill-group-label">Web & Backend</div>
                 <div class="skill-tags">
-                    <span class="skill-tag">ASP.NET Core MVC[cite: 1]</span>
-                    <span class="skill-tag">C#[cite: 1]</span>
-                    <span class="skill-tag">.NET Framework[cite: 1]</span>
-                    <span class="skill-tag">JavaScript[cite: 1]</span>
-                    <span class="skill-tag">HTML5 / CSS3[cite: 1]</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <div class="skill-group-label">Database & Tools</div>
-                <div class="skill-tags">
-                    <span class="skill-tag">SQL Server[cite: 1]</span>
-                    <span class="skill-tag">Supabase[cite: 1]</span>
-                    <span class="skill-tag">SQLite[cite: 1]</span>
-                    <span class="skill-tag">Git / GitHub[cite: 1]</span>
-                    <span class="skill-tag">Visual Studio[cite: 1]</span>
+                    <span class="skill-tag">ASP.NET Core MVC</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">.NET 8</span>
+                    <span class="skill-tag">JavaScript</span>
                 </div>
             </div>
         </div>
@@ -162,77 +145,41 @@
         <div class="section-tag">Work</div>
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
-
-            <!-- Sizwe TradeBot -->
             <div class="project-card">
                 <div class="project-body">
-                    <div class="project-type">Android · 2025 – Present[cite: 1]</div>
+                    <div class="project-type">Android · 2025 – Present</div>
                     <div class="project-name">Sizwe TradeBot</div>
-                    <div class="project-desc">Trading simulator with EMA, RSI, MACD indicators and four-screen Navigation graph[cite: 1].</div>
+                    <div class="project-desc">Trading simulator with EMA, RSI, MACD indicators and four-screen Navigation graph.</div>
                     <div class="project-stack">
                         <span class="stack-tag">Kotlin</span>
-                        <span class="stack-tag">Jetpack Compose</span>
-                        <span class="stack-tag">Material3</span>
+                        <span class="stack-tag">Compose</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Portfolio Website -->
+            
             <div class="project-card">
                 <div class="project-body">
-                    <div class="project-type">Web · 2025[cite: 1]</div>
-                    <div class="project-name">Portfolio Website</div>
-                    <div class="project-desc">Live deployed portfolio with animated hero section and six showcased projects[cite: 1].</div>
-                    <div class="project-stack">
-                        <span class="stack-tag">HTML5</span>
-                        <span class="stack-tag">CSS3</span>
-                        <span class="stack-tag">GitHub Pages</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FinTrack -->
-            <div class="project-card">
-                <div class="project-body">
-                    <div class="project-type">Android · 2024 – 2025[cite: 1]</div>
+                    <div class="project-type">Android · 2024 – 2025</div>
                     <div class="project-name">FinTrack — Budget Tracker</div>
-                    <div class="project-desc">Completed 8-screen Android app with CRUD expense tracking and data visualisation[cite: 1].</div>
+                    <div class="project-desc">Completed 8-screen Android app with CRUD expense tracking, goal setting, and data visualisation.</div>
                     <div class="project-stack">
                         <span class="stack-tag">Kotlin</span>
                         <span class="stack-tag">RoomDB</span>
-                        <span class="stack-tag">Android Studio</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Lecturer Claim System -->
             <div class="project-card">
                 <div class="project-body">
-                    <div class="project-type">Web Application · 2024[cite: 1]</div>
+                    <div class="project-type">Web Application · 2024</div>
                     <div class="project-name">Lecturer Claim Management System</div>
-                    <div class="project-desc">Full MVC web system with role-based access, file uploads, and SQL stored procedures[cite: 1].</div>
+                    <div class="project-desc">Full MVC web system with role-based access, file uploads, and SQL Server stored procedures.</div>
                     <div class="project-stack">
-                        <span class="stack-tag">ASP.NET Core MVC</span>
-                        <span class="stack-tag">C#</span>
+                        <span class="stack-tag">ASP.NET Core</span>
                         <span class="stack-tag">SQL Server</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Personal Finance App -->
-            <div class="project-card">
-                <div class="project-body">
-                    <div class="project-type">Full-Stack · 2025 – Present[cite: 1]</div>
-                    <div class="project-name">Personal Finance App</div>
-                    <div class="project-desc">Dark-mode finance app with Supabase real-time backend and ZAR currency support[cite: 1].</div>
-                    <div class="project-stack">
-                        <span class="stack-tag">Supabase</span>
-                        <span class="stack-tag">JavaScript</span>
-                        <span class="stack-tag">CSS</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -242,13 +189,13 @@
         <h2 class="section-title">Certifications</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <div class="skill-group-label">HackerRank — April 2026[cite: 1]</div>
+                <div class="skill-group-label">HackerRank — April 2026</div>
                 <div class="skill-tags">
                     <span class="skill-tag">Software Engineer</span>
                     <span class="skill-tag">Frontend Developer (React)</span>
                     <span class="skill-tag">SQL Advanced</span>
                     <span class="skill-tag">SQL Intermediate</span>
-                    <span class="skill-tag">Problem Solving (Intermediate)</span>
+                    <span class="skill-tag">Problem Solving</span>
                     <span class="skill-tag">Python Basic</span>
                 </div>
             </div>
@@ -262,21 +209,16 @@
         <div class="edu-card">
             <div class="edu-icon">RC</div>
             <div>
-                <div class="edu-school">Rosebank College Durban[cite: 1]</div>
-                <div class="edu-degree">Diploma in Software Development[cite: 1]</div>
-                <div class="edu-years">NQF LEVEL 6 · 2023 – 2025[cite: 1]</div>
-                <div class="edu-modules" style="margin-top: 10px;">
-                    <span class="module-tag">Programming 1A-2B</span>
-                    <span class="module-tag">Information Security</span>
-                    <span class="module-tag">Database Management</span>
-                </div>
+                <div class="edu-school">Rosebank College Durban</div>
+                <div class="edu-degree">Diploma in Software Development</div>
+                <div class="edu-years">NQF LEVEL 6 · 2023 – 2025</div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-copy">© 2026 Sizwe Sigubudu · Durban, ZA</div>
-        <div class="footer-made">References available upon request[cite: 1]</div>
+        <div class="footer-made">References available upon request</div>
     </footer>
 
 </main>

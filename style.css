@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sizwe Sigubudu · Full-Stack Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
 /* ─── ROOT VARIABLES ─── */
 :root {
   --bg: #0d0d0f;
@@ -226,7 +218,7 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-ghost:hover { border-color: var(--mint); color: var(--mint); transform: translateY(-1px); }
 
-/* ─── EXPERIENCE (MISSING AREA FIXED) ─── */
+/* ─── EXPERIENCE ─── */
 .experience-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 14px; padding: 28px; margin-bottom: 24px;
@@ -299,7 +291,7 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
   font-size: 11px; color: var(--violet); font-family: 'Space Mono', monospace;
 }
 
-/* ─── CERTIFICATIONS (MISSING AREA FIXED) ─── */
+/* ─── CERTIFICATIONS ─── */
 .cert-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
 }
@@ -327,7 +319,7 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
 .edu-degree { font-size: 14px; color: var(--mint); margin: 4px 0; }
 .edu-years { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
 
-/* ─── MOBILE ─── */
+/* ─── MOBILE RESPONSIVENESS ─── */
 @media (max-width: 900px) {
   .sidebar {
     width: 100%; height: auto; position: fixed; top: 0; 
@@ -349,216 +341,3 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
   }
   .mobile-nav a.active { color: var(--mint); }
 }
-</style>
-</head>
-<body>
-
-<!-- ═══ SIDEBAR ═══ -->
-<aside class="sidebar">
-  <div>
-    <div class="sidebar-greeting">Portfolio v2.0</div>
-    <div class="sidebar-name">Sizwe<br>Sigubudu</div>
-    <div class="sidebar-role">Full-Stack Developer</div>
-  </div>
-
-  <div class="sidebar-divider"></div>
-
-  <ul class="contact-list">
-    <li>
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.32h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-      </div>
-      <div>
-        <div class="contact-label">Phone</div>
-        <div class="contact-value"><a href="tel:+27662387374">0662 387 374</a></div>
-      </div>
-    </li>
-    <li>
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </div>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value"><a href="mailto:sizwesigubudu7@gmail.com">sizwesigubudu7@gmail.com</a></div>
-      </div>
-    </li>
-    <li>
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </div>
-      <div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value"><a href="https://www.linkedin.com/in/sizwe-sigubudu-01965328a" target="_blank">Connect</a></div>
-      </div>
-    </li>
-    <li>
-      <div class="contact-icon">
-        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-      </div>
-      <div>
-        <div class="contact-label">GitHub</div>
-        <div class="contact-value"><a href="#" target="_blank">sizwe-dev</a></div>
-      </div>
-    </li>
-  </ul>
-
-  <nav style="width:100%">
-    <ul class="sidebar-nav">
-      <li><a href="#about" class="active"><span class="nav-dot"></span>Profile</a></li>
-      <li><a href="#experience"><span class="nav-dot"></span>Experience</a></li>
-      <li><a href="#skills"><span class="nav-dot"></span>Skills</a></li>
-      <li><a href="#portfolio"><span class="nav-dot"></span>Projects</a></li>
-      <li><a href="#certifications"><span class="nav-dot"></span>Certs</a></li>
-    </ul>
-  </nav>
-</aside>
-
-<main class="main">
-
-  <!-- PROFILE -->
-  <section id="about">
-    <div class="hero-grid-bg"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-intro">
-      <div class="hero-greeting">Durban, South Africa</div>
-      <h1 class="hero-name">Full-Stack<br><span>Developer</span></h1>
-      <p class="hero-subtitle">NQF Level 6 · Mobile · Web · Backend</p>
-      <p class="hero-description">
-        Passionate Software Developer with an NQF Level 6 Diploma in IT. Specializing in building scalable web and mobile applications with C#, ASP.NET Core, and Kotlin. 
-      </p>
-      <div class="hero-badges">
-        <span class="badge">C# / ASP.NET</span>
-        <span class="badge">Kotlin / Compose</span>
-        <span class="badge">SQL Server</span>
-        <span class="badge">Supabase</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-tag">Career</div>
-    <h2 class="section-title">Work Experience</h2>
-    
-    <div class="experience-card">
-      <div class="exp-header">
-        <div class="exp-logo">SELF</div>
-        <div>
-          <div class="exp-role">Freelance Software Developer</div>
-          <div class="exp-company">Self-employed | Durban, ZA</div>
-          <div class="exp-date">2025 – Present</div>
-        </div>
-      </div>
-      <ul class="exp-bullets">
-        <li>Built Android trading simulator app (Kotlin/Jetpack Compose) with technical indicators.</li>
-        <li>Deployed personal portfolio website on GitHub Pages showcasing six live projects.</li>
-        <li>Prototyped full-stack finance web app using Supabase with real-time authentication.</li>
-      </ul>
-    </div>
-
-    <div class="experience-card">
-      <div class="exp-header">
-        <div class="exp-logo">CODE</div>
-        <div>
-          <div class="exp-role">Full Stack Intern</div>
-          <div class="exp-company">CodeAlpha · Remote</div>
-          <div class="exp-date">May 2026 – Present</div>
-        </div>
-      </div>
-      <p style="color:#9898a8; font-size:14px;">Building full stack web development projects as part of a one-month virtual internship.</p>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-tag">Stack</div>
-    <h2 class="section-title">Skills & Tools</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-label">Mobile</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Kotlin</span><span class="skill-tag">Jetpack Compose</span>
-          <span class="skill-tag">RoomDB</span><span class="skill-tag">AdMob</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-label">Backend</div>
-        <div class="skill-tags">
-          <span class="skill-tag">C# / .NET 8</span><span class="skill-tag">ASP.NET MVC</span>
-          <span class="skill-tag">SQL Server</span><span class="skill-tag">Supabase</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="portfolio">
-    <div class="section-tag">Archive</div>
-    <h2 class="section-title">Live Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-body">
-          <div class="project-name">Sizwe TradeBot</div>
-          <div class="project-desc">Trading simulator with EMA, RSI, MACD indicators and Compose Navigation.</div>
-          <div class="project-stack"><span class="stack-tag">Kotlin</span><span class="stack-tag">Material3</span></div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-body">
-          <div class="project-name">FinTrack</div>
-          <div class="project-desc">8-screen budgeting app with CRUD expense tracking and data visualization.</div>
-          <div class="project-stack"><span class="stack-tag">Android Studio</span><span class="stack-tag">RoomDB</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications">
-    <div class="section-tag">Verified</div>
-    <h2 class="section-title">Certifications</h2>
-    <div class="cert-grid">
-      <div class="cert-item">
-        <span class="cert-name">Software Engineer</span>
-        <span class="cert-meta">HackerRank · April 2026</span>
-      </div>
-      <div class="cert-item">
-        <span class="cert-name">SQL Advanced</span>
-        <span class="cert-meta">HackerRank · April 2026</span>
-      </div>
-      <div class="cert-item">
-        <span class="cert-name">React Frontend</span>
-        <span class="cert-meta">HackerRank · April 2026</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="section-tag">History</div>
-    <h2 class="section-title">Education</h2>
-    <div class="edu-card">
-      <div class="edu-icon">RC</div>
-      <div>
-        <div class="edu-school">Rosebank College Durban</div>
-        <div class="edu-degree">Diploma in Software Development</div>
-        <div class="edu-years">NQF Level 6 · 2023 – 2025</div>
-      </div>
-    </div>
-  </section>
-
-  <footer style="padding: 40px 56px; color: var(--muted); font-size: 11px; font-family: 'Space Mono', monospace;">
-    © 2026 SIZWE SIGUBUDU · REFERENCES AVAILABLE UPON REQUEST
-  </footer>
-
-</main>
-
-<nav class="mobile-nav">
-  <a href="#about" class="active">Profile</a>
-  <a href="#experience">Work</a>
-  <a href="#portfolio">Projects</a>
-  <a href="#certifications">Certs</a>
-</nav>
-
-</body>
-</html>

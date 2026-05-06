@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sizwe Sigubudu · Full-Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── ROOT VARIABLES ─── */
 :root {
   --bg: #0d0d0f;
   --surface: #141416;
@@ -129,7 +138,7 @@ body {
 .sidebar-nav a.active .nav-dot,
 .sidebar-nav a:hover .nav-dot { background: var(--mint); }
 
-/* ─── MAIN ─── */
+/* ─── MAIN CONTENT ─── */
 .main { flex: 1; margin-left: 280px; overflow-x: hidden; }
 
 /* ─── SECTIONS ─── */
@@ -152,7 +161,7 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
   margin-bottom: 32px; letter-spacing: -1px; line-height: 1.2;
 }
 
-/* ─── HERO ─── */
+/* ─── HERO SECTION ─── */
 #about {
   background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
   position: relative; overflow: hidden; padding: 80px 56px;
@@ -205,7 +214,7 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
   letter-spacing: 0.5px; transition: all 0.2s;
 }
 .badge:hover { border-color: var(--violet); color: var(--violet); }
-.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
 .btn {
   padding: 11px 24px; border-radius: 8px;
   font-size: 13px; font-weight: 600; cursor: pointer;
@@ -217,12 +226,36 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-ghost:hover { border-color: var(--mint); color: var(--mint); transform: translateY(-1px); }
 
+/* ─── EXPERIENCE (MISSING AREA FIXED) ─── */
+.experience-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 28px; margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+.experience-card:hover { border-color: var(--violet); }
+.exp-header { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
+.exp-logo {
+  width: 52px; height: 52px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Mono', monospace; font-weight: 700; color: var(--violet);
+}
+.exp-role { font-size: 18px; font-weight: 700; color: var(--text); }
+.exp-company { color: var(--mint); font-size: 14px; font-weight: 500; }
+.exp-date { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); }
+.exp-bullets { list-style: none; margin-left: 4px; }
+.exp-bullets li { 
+  position: relative; padding-left: 20px; margin-bottom: 10px; 
+  font-size: 14px; color: #9898a8;
+}
+.exp-bullets li::before {
+  content: '>'; position: absolute; left: 0; color: var(--violet);
+  font-family: 'Space Mono', monospace; font-weight: 700;
+}
+
 /* ─── SKILLS ─── */
-#skills { background: var(--bg); }
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;
 }
 .skill-group {
   background: var(--surface); border: 1px solid var(--border);
@@ -236,214 +269,296 @@ section { padding: 64px 56px; border-bottom: 1px solid var(--border); }
 }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .skill-tag {
-  padding: 4px 10px;
-  background: var(--surface2); border: 1px solid var(--border);
-  border-radius: 6px; font-size: 12px; color: var(--text);
-  font-family: 'Space Mono', monospace;
+  padding: 4px 10px; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 6px; font-size: 11px; color: var(--text); font-family: 'Space Mono', monospace;
 }
 
 /* ─── PORTFOLIO ─── */
-#portfolio { background: var(--surface); }
-.filter-bar { display: flex; gap: 8px; margin-bottom: 36px; flex-wrap: wrap; }
-.filter-btn {
-  padding: 7px 18px; border-radius: 100px;
-  border: 1px solid var(--border); background: transparent;
-  color: var(--muted); font-size: 12px; cursor: pointer;
-  font-family: 'DM Sans', sans-serif; font-weight: 500;
-  transition: all 0.2s; letter-spacing: 0.3px;
-}
-.filter-btn:hover, .filter-btn.active {
-  background: var(--violet); border-color: var(--violet); color: #fff;
-}
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;
 }
 .project-card {
   background: var(--surface2); border: 1px solid var(--border);
-  border-radius: 14px; overflow: hidden;
-  transition: all 0.25s; display: flex; flex-direction: column;
+  border-radius: 14px; overflow: hidden; transition: all 0.25s;
+  display: flex; flex-direction: column; height: 100%;
 }
 .project-card:hover {
   border-color: var(--violet); transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(139,92,246,0.12);
 }
-.project-thumb {
-  height: 160px; position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-}
-.project-thumb-bg {
-  position: absolute; inset: 0; opacity: 0.15; transition: opacity 0.3s;
-}
-.project-card:hover .project-thumb-bg { opacity: 0.25; }
-.project-thumb-icon {
-  position: relative; z-index: 1;
-  width: 56px; height: 56px; border-radius: 14px;
-  display: flex; align-items: center; justify-content: center; font-size: 22px;
-}
-.project-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.project-type {
-  font-size: 10px; text-transform: uppercase; letter-spacing: 2px;
-  color: var(--mint); font-weight: 600; margin-bottom: 8px;
-  font-family: 'Space Mono', monospace;
-}
+.project-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .project-name {
-  font-family: 'Space Mono', monospace; font-size: 16px;
-  font-weight: 700; color: var(--text); margin-bottom: 10px; letter-spacing: -0.5px;
+  font-family: 'Space Mono', monospace; font-size: 17px;
+  font-weight: 700; color: var(--text); margin-bottom: 12px;
 }
-.project-desc { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; margin-bottom: 16px; }
-.project-stack { display: flex; flex-wrap: wrap; gap: 5px; }
+.project-desc { font-size: 14px; color: var(--muted); margin-bottom: 20px; flex: 1; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 6px; }
 .stack-tag {
-  padding: 3px 8px;
-  background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.25);
-  border-radius: 4px; font-size: 11px; color: var(--violet);
-  font-family: 'Space Mono', monospace;
+  padding: 3px 10px; background: rgba(139,92,246,0.1); 
+  border: 1px solid rgba(139,92,246,0.2); border-radius: 4px;
+  font-size: 11px; color: var(--violet); font-family: 'Space Mono', monospace;
 }
 
+/* ─── CERTIFICATIONS (MISSING AREA FIXED) ─── */
+.cert-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px;
+}
+.cert-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px; border-left: 3px solid var(--violet);
+  transition: all 0.2s;
+}
+.cert-item:hover { background: var(--surface2); transform: translateX(4px); }
+.cert-name { font-weight: 600; font-size: 14px; color: var(--text); display: block; margin-bottom: 4px; }
+.cert-meta { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); }
+
 /* ─── EDUCATION ─── */
-#education { background: var(--bg); }
 .edu-card {
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: 14px; padding: 28px;
-  display: flex; gap: 24px; margin-bottom: 24px;
-  transition: border-color 0.2s; max-width: 720px;
+  border-radius: 14px; padding: 28px; display: flex; gap: 24px; margin-bottom: 24px;
 }
-.edu-card:hover { border-color: var(--mint); }
 .edu-icon {
   width: 48px; height: 48px; border-radius: 12px;
   background: linear-gradient(135deg, var(--violet), var(--mint));
   display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; font-family: 'Space Mono', monospace;
-  font-size: 15px; color: #fff; font-weight: 700;
+  flex-shrink: 0; font-family: 'Space Mono', monospace; font-size: 15px; color: #fff; font-weight: 700;
 }
-.edu-school {
-  font-family: 'Space Mono', monospace; font-size: 16px;
-  font-weight: 700; color: var(--text); margin-bottom: 4px; letter-spacing: -0.5px;
-}
-.edu-degree { font-size: 14px; color: var(--mint); margin-bottom: 4px; font-weight: 500; }
-.edu-years {
-  font-family: 'Space Mono', monospace; font-size: 11px;
-  color: var(--muted); letter-spacing: 1px; margin-bottom: 14px;
-}
-.edu-modules { display: flex; flex-wrap: wrap; gap: 6px; }
-.module-tag {
-  padding: 3px 10px; background: var(--surface2);
-  border: 1px solid var(--border); border-radius: 6px;
-  font-size: 11px; color: var(--muted);
-}
+.edu-school { font-family: 'Space Mono', monospace; font-size: 17px; font-weight: 700; color: var(--text); }
+.edu-degree { font-size: 14px; color: var(--mint); margin: 4px 0; }
+.edu-years { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 12px; }
 
-/* ─── CONTACT ─── */
-#contact { background: var(--surface); }
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px; max-width: 800px;
-}
-.contact-card {
-  background: var(--surface2); border: 1px solid var(--border);
-  border-radius: 12px; padding: 20px;
-  display: flex; align-items: center; gap: 16px;
-  text-decoration: none; transition: all 0.2s;
-}
-.contact-card:hover { border-color: var(--mint); transform: translateY(-2px); }
-.contact-card-icon {
-  width: 44px; height: 44px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--violet), var(--mint));
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.contact-card-icon svg {
-  width: 18px; height: 18px; stroke: #fff; fill: none;
-  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
-}
-.contact-card-label {
-  font-size: 10px; text-transform: uppercase;
-  letter-spacing: 2px; color: var(--muted); font-weight: 600; margin-bottom: 3px;
-}
-.contact-card-value { font-size: 13px; color: var(--text); font-weight: 500; word-break: break-all; }
-
-/* ─── FOOTER ─── */
-footer {
-  padding: 28px 56px;
-  display: flex; align-items: center; justify-content: space-between;
-  background: var(--bg);
-}
-.footer-copy { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); }
-.footer-made { font-size: 12px; color: var(--subtle); }
-
-/* ─── SCROLLBAR ─── */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--surface); }
-::-webkit-scrollbar-thumb { background: var(--subtle); border-radius: 10px; }
-
-/* ─── MOBILE NAV (hidden on desktop) ─── */
-.mobile-nav { display: none; }
-
-/* ══════════════════════════════════════════
-   RESPONSIVE
-══════════════════════════════════════════ */
+/* ─── MOBILE ─── */
 @media (max-width: 900px) {
   .sidebar {
-    width: 100%; height: auto; min-height: unset;
-    position: fixed; top: 0; left: 0; right: 0;
-    flex-direction: row; align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    border-right: none; border-bottom: 1px solid var(--border);
-    z-index: 200; overflow: visible;
-    backdrop-filter: blur(14px);
-    background: rgba(20,20,22,0.96);
+    width: 100%; height: auto; position: fixed; top: 0; 
+    flex-direction: row; justify-content: space-between; padding: 12px 20px;
+    backdrop-filter: blur(14px); background: rgba(20,20,22,0.95);
   }
   .contact-list, .sidebar-divider, .sidebar-nav { display: none; }
-  .sidebar-greeting { font-size: 9px; margin-bottom: 1px; letter-spacing: 1px; }
-  .sidebar-name { font-size: 15px; margin-bottom: 2px; letter-spacing: -0.3px; }
-  .sidebar-name br { display: none; }
-  .sidebar-role { font-size: 8px; letter-spacing: 1.2px; margin-bottom: 0; }
-
-  .main { margin-left: 0; margin-top: 66px; padding-bottom: 76px; }
-  section { padding: 36px 20px; }
-  #about { padding: 40px 20px; }
-  #about::before { display: none; }
-  .hero-name { font-size: 32px; letter-spacing: -1.5px; }
-  .hero-subtitle { font-size: 13px; }
-  .hero-description { font-size: 14px; margin-bottom: 28px; }
-  .section-title { font-size: 22px; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr 1fr; }
-  .edu-card { flex-direction: column; gap: 16px; padding: 20px; }
-  footer { padding: 20px; flex-direction: column; gap: 6px; text-align: center; }
-
+  .main { margin-left: 0; margin-top: 60px; padding-bottom: 70px; }
+  section { padding: 40px 20px; }
+  
   .mobile-nav {
-    display: flex;
-    position: fixed; bottom: 0; left: 0; right: 0;
-    background: rgba(20,20,22,0.97);
-    border-top: 1px solid var(--border);
-    z-index: 200;
-    backdrop-filter: blur(14px);
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0;
+    background: rgba(20,20,22,0.98); border-top: 1px solid var(--border);
+    z-index: 200; backdrop-filter: blur(14px);
   }
   .mobile-nav a {
-    flex: 1; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 9px 4px 8px;
-    color: var(--muted); text-decoration: none;
-    font-size: 9px; font-family: 'Space Mono', monospace;
-    letter-spacing: 0.5px; text-transform: uppercase;
-    gap: 4px; border-top: 2px solid transparent; transition: all 0.2s;
+    flex: 1; display: flex; flex-direction: column; align-items: center;
+    padding: 12px 0; color: var(--muted); text-decoration: none; font-size: 10px;
   }
-  .mobile-nav a svg {
-    width: 17px; height: 17px; stroke: currentColor; fill: none;
-    stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
-  }
-  .mobile-nav a.active,
-  .mobile-nav a:hover { color: var(--mint); border-top-color: var(--mint); }
+  .mobile-nav a.active { color: var(--mint); }
 }
+</style>
+</head>
+<body>
 
-@media (max-width: 480px) {
-  .skills-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .hero-badges { gap: 6px; }
-  .badge { font-size: 10px; padding: 4px 10px; }
-  .hero-cta { flex-direction: column; }
-  .btn { width: 100%; justify-content: center; }
-}
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar">
+  <div>
+    <div class="sidebar-greeting">Portfolio v2.0</div>
+    <div class="sidebar-name">Sizwe<br>Sigubudu</div>
+    <div class="sidebar-role">Full-Stack Developer</div>
+  </div>
+
+  <div class="sidebar-divider"></div>
+
+  <ul class="contact-list">
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.32h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Phone</div>
+        <div class="contact-value"><a href="tel:+27662387374">0662 387 374</a></div>
+      </div>
+    </li>
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:sizwesigubudu7@gmail.com">sizwesigubudu7@gmail.com</a></div>
+      </div>
+    </li>
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value"><a href="https://www.linkedin.com/in/sizwe-sigubudu-01965328a" target="_blank">Connect</a></div>
+      </div>
+    </li>
+    <li>
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">GitHub</div>
+        <div class="contact-value"><a href="#" target="_blank">sizwe-dev</a></div>
+      </div>
+    </li>
+  </ul>
+
+  <nav style="width:100%">
+    <ul class="sidebar-nav">
+      <li><a href="#about" class="active"><span class="nav-dot"></span>Profile</a></li>
+      <li><a href="#experience"><span class="nav-dot"></span>Experience</a></li>
+      <li><a href="#skills"><span class="nav-dot"></span>Skills</a></li>
+      <li><a href="#portfolio"><span class="nav-dot"></span>Projects</a></li>
+      <li><a href="#certifications"><span class="nav-dot"></span>Certs</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="main">
+
+  <!-- PROFILE -->
+  <section id="about">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-intro">
+      <div class="hero-greeting">Durban, South Africa</div>
+      <h1 class="hero-name">Full-Stack<br><span>Developer</span></h1>
+      <p class="hero-subtitle">NQF Level 6 · Mobile · Web · Backend</p>
+      <p class="hero-description">
+        Passionate Software Developer with an NQF Level 6 Diploma in IT. Specializing in building scalable web and mobile applications with C#, ASP.NET Core, and Kotlin. 
+      </p>
+      <div class="hero-badges">
+        <span class="badge">C# / ASP.NET</span>
+        <span class="badge">Kotlin / Compose</span>
+        <span class="badge">SQL Server</span>
+        <span class="badge">Supabase</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-tag">Career</div>
+    <h2 class="section-title">Work Experience</h2>
+    
+    <div class="experience-card">
+      <div class="exp-header">
+        <div class="exp-logo">SELF</div>
+        <div>
+          <div class="exp-role">Freelance Software Developer</div>
+          <div class="exp-company">Self-employed | Durban, ZA</div>
+          <div class="exp-date">2025 – Present</div>
+        </div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Built Android trading simulator app (Kotlin/Jetpack Compose) with technical indicators.</li>
+        <li>Deployed personal portfolio website on GitHub Pages showcasing six live projects.</li>
+        <li>Prototyped full-stack finance web app using Supabase with real-time authentication.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <div class="exp-header">
+        <div class="exp-logo">CODE</div>
+        <div>
+          <div class="exp-role">Full Stack Intern</div>
+          <div class="exp-company">CodeAlpha · Remote</div>
+          <div class="exp-date">May 2026 – Present</div>
+        </div>
+      </div>
+      <p style="color:#9898a8; font-size:14px;">Building full stack web development projects as part of a one-month virtual internship.</p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-tag">Stack</div>
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-label">Mobile</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Kotlin</span><span class="skill-tag">Jetpack Compose</span>
+          <span class="skill-tag">RoomDB</span><span class="skill-tag">AdMob</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">C# / .NET 8</span><span class="skill-tag">ASP.NET MVC</span>
+          <span class="skill-tag">SQL Server</span><span class="skill-tag">Supabase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="portfolio">
+    <div class="section-tag">Archive</div>
+    <h2 class="section-title">Live Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-body">
+          <div class="project-name">Sizwe TradeBot</div>
+          <div class="project-desc">Trading simulator with EMA, RSI, MACD indicators and Compose Navigation.</div>
+          <div class="project-stack"><span class="stack-tag">Kotlin</span><span class="stack-tag">Material3</span></div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-body">
+          <div class="project-name">FinTrack</div>
+          <div class="project-desc">8-screen budgeting app with CRUD expense tracking and data visualization.</div>
+          <div class="project-stack"><span class="stack-tag">Android Studio</span><span class="stack-tag">RoomDB</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="section-tag">Verified</div>
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <span class="cert-name">Software Engineer</span>
+        <span class="cert-meta">HackerRank · April 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">SQL Advanced</span>
+        <span class="cert-meta">HackerRank · April 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">React Frontend</span>
+        <span class="cert-meta">HackerRank · April 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-tag">History</div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon">RC</div>
+      <div>
+        <div class="edu-school">Rosebank College Durban</div>
+        <div class="edu-degree">Diploma in Software Development</div>
+        <div class="edu-years">NQF Level 6 · 2023 – 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 40px 56px; color: var(--muted); font-size: 11px; font-family: 'Space Mono', monospace;">
+    © 2026 SIZWE SIGUBUDU · REFERENCES AVAILABLE UPON REQUEST
+  </footer>
+
+</main>
+
+<nav class="mobile-nav">
+  <a href="#about" class="active">Profile</a>
+  <a href="#experience">Work</a>
+  <a href="#portfolio">Projects</a>
+  <a href="#certifications">Certs</a>
+</nav>
+
+</body>
+</html>

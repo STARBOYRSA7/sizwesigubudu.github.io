@@ -7,12 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Extra spacing for better layout breathing room */
-        section { padding: 80px 0; }
-        .edu-card { margin-bottom: 40px; padding: 30px; }
-        .project-card { margin-bottom: 30px; }
-        .skill-group { margin-bottom: 30px; }
-        .hero-description { line-height: 1.8; margin-bottom: 30px; }
+        /* Spacing fixes to prevent the 'stuffed' look */
+        section { 
+            padding: 100px 0; /* Increased vertical breathing room */
+        }
+        .edu-card { 
+            margin-bottom: 50px; 
+            padding: 35px; 
+        }
+        .project-card { 
+            margin-bottom: 40px; 
+        }
+        .skill-group { 
+            margin-bottom: 45px; 
+        }
+        .hero-description { 
+            line-height: 1.9; 
+            margin-bottom: 40px; 
+            max-width: 800px;
+        }
+        .sidebar-nav li {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +62,16 @@
                 <div class="contact-value">Durban, South Africa</div>
             </div>
         </li>
+        <!-- Restored LinkedIn Section -->
+        <li>
+            <div class="contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value"><a href="https://www.linkedin.com/in/sizwe-sigubudu-01965328a" target="_blank">sizwe-sigubudu</a></div>
+            </div>
+        </li>
     </ul>
 
     <div class="sidebar-divider"></div>
@@ -62,6 +88,7 @@
     </nav>
 </aside>
 
+<!-- ═══ MAIN CONTENT ═══ -->
 <main class="main">
 
     <!-- ABOUT -->
@@ -72,7 +99,7 @@
             <h1 class="hero-name">Sizwe<br><span>Sigubudu</span></h1>
             <p class="hero-subtitle">Full-Stack · Mobile · Web & Backend</p>
             <p class="hero-description">
-                Full-Stack Software Developer with an NQF Level 6 Diploma in IT. I specialize in building scalable web and mobile applications using C#, ASP.NET Core, SQL Server, and Android (Kotlin/Jetpack Compose). Passionate about solving real-world problems through clean architecture.
+                Full-Stack Software Developer with an NQF Level 6 Diploma in IT. I specialize in building scalable web and mobile applications using C#, ASP.NET Core, SQL Server, and Android (Kotlin/Jetpack Compose). Passionate about solving real-world problems through clean architecture and modern UI/UX design.
             </p>
             <div class="hero-cta">
                 <a href="#portfolio" class="btn btn-primary">View Projects</a>
@@ -86,6 +113,7 @@
         <div class="section-tag">Career</div>
         <h2 class="section-title">Experience</h2>
         
+        <!-- CodeAlpha -->
         <div class="edu-card">
             <div class="edu-icon">CA</div>
             <div>
@@ -98,13 +126,14 @@
             </div>
         </div>
 
+        <!-- Freelance -->
         <div class="edu-card">
             <div class="edu-icon">FS</div>
             <div>
                 <div class="edu-school">Freelance Software Developer</div>
                 <div class="edu-degree">Self-employed | Durban, South Africa</div>
                 <div class="edu-years">2025 – Present</div>
-                <ul style="margin-top: 15px; font-size: 0.95rem; color: #a0a0a0; padding-left: 20px; line-height: 2;">
+                <ul style="margin-top: 20px; font-size: 0.95rem; color: #a0a0a0; padding-left: 20px; line-height: 2.2;">
                     <li>Built Android trading simulator app (Kotlin/Jetpack Compose) with EMA, RSI, and MACD indicators.</li>
                     <li>Deployed personal portfolio website on GitHub Pages showcasing six live projects.</li>
                     <li>Prototyped full-stack finance web app using Supabase with real-time authentication.</li>
@@ -120,21 +149,23 @@
         <h2 class="section-title">Skills & Tools</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <div class="skill-group-label">Mobile</div>
+                <div class="skill-group-label">Mobile Development</div>
                 <div class="skill-tags">
                     <span class="skill-tag">Kotlin</span>
                     <span class="skill-tag">Jetpack Compose</span>
                     <span class="skill-tag">Android Studio</span>
                     <span class="skill-tag">RoomDB</span>
+                    <span class="skill-tag">SQLite</span>
                 </div>
             </div>
             <div class="skill-group">
                 <div class="skill-group-label">Web & Backend</div>
                 <div class="skill-tags">
                     <span class="skill-tag">ASP.NET Core MVC</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">.NET 8</span>
+                    <span class="skill-tag">C# (.NET 8)</span>
+                    <span class="skill-tag">SQL Server</span>
                     <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML5 / CSS3</span>
                 </div>
             </div>
         </div>
@@ -149,7 +180,7 @@
                 <div class="project-body">
                     <div class="project-type">Android · 2025 – Present</div>
                     <div class="project-name">Sizwe TradeBot</div>
-                    <div class="project-desc">Trading simulator with EMA, RSI, MACD indicators and four-screen Navigation graph.</div>
+                    <div class="project-desc">Advanced trading simulator with real-time indicator tracking and multi-screen navigation.</div>
                     <div class="project-stack">
                         <span class="stack-tag">Kotlin</span>
                         <span class="stack-tag">Compose</span>
@@ -161,7 +192,7 @@
                 <div class="project-body">
                     <div class="project-type">Android · 2024 – 2025</div>
                     <div class="project-name">FinTrack — Budget Tracker</div>
-                    <div class="project-desc">Completed 8-screen Android app with CRUD expense tracking, goal setting, and data visualisation.</div>
+                    <div class="project-desc">Full CRUD budget management application with data visualization and goal tracking.</div>
                     <div class="project-stack">
                         <span class="stack-tag">Kotlin</span>
                         <span class="stack-tag">RoomDB</span>
@@ -172,8 +203,8 @@
             <div class="project-card">
                 <div class="project-body">
                     <div class="project-type">Web Application · 2024</div>
-                    <div class="project-name">Lecturer Claim Management System</div>
-                    <div class="project-desc">Full MVC web system with role-based access, file uploads, and SQL Server stored procedures.</div>
+                    <div class="project-name">Lecturer Claim System</div>
+                    <div class="project-desc">Enterprise-grade management system featuring role-based security and SQL automation.</div>
                     <div class="project-stack">
                         <span class="stack-tag">ASP.NET Core</span>
                         <span class="stack-tag">SQL Server</span>
@@ -189,14 +220,12 @@
         <h2 class="section-title">Certifications</h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <div class="skill-group-label">HackerRank — April 2026</div>
+                <div class="skill-group-label">HackerRank — 2026</div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Software Engineer</span>
+                    <span class="skill-tag">Software Engineer Intern</span>
                     <span class="skill-tag">Frontend Developer (React)</span>
-                    <span class="skill-tag">SQL Advanced</span>
-                    <span class="skill-tag">SQL Intermediate</span>
+                    <span class="skill-tag">SQL (Advanced)</span>
                     <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Python Basic</span>
                 </div>
             </div>
         </div>
